@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: updating the packages
+    apt: 
+      update_cache: yes
+  #nodejs specific settings
+- hosts: app
+  become: yes
+  tasks:
+  - name: installing nodejs and npm
+    apt:
+      name: "{{ packages }}"
+    vars:
+      packages:
+        - nodejs
+        - npm
+        - build-essential
+  
+  
+  
+    
