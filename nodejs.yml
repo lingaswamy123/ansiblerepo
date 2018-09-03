@@ -23,7 +23,7 @@
       dest: /home/ubuntu/
       mode: "ugo=rwx"
   - name: run the script
-    command: /home/ubuntu/./hello.js
+    command: /home/ubuntu/./hello.js.j2
   
 
   
