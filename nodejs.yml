@@ -17,6 +17,17 @@
         - nodejs
         - npm
         - build-essential
+  - name: creating template with dynamic content
+    template:
+      src: templates/hello.js.j2
+      dest: /home/ubuntu
+      mode: "ugo=rwx"
+  - name: run the script
+    command: ./hello.js
+    args:
+      chdir: /home/ubuntu/
+  
+
   
   
   
