@@ -19,11 +19,13 @@
         - build-essential
   - name: creating template with dynamic content
     template:
-      src: "templates/hello.js.j2"
-      dest: "/home/ubuntu/"
+      src: templates/hello.js.j2
+      dest: "/home/ubuntu/hello.js"
       mode: "ugo=rwx"
   - name: run the script
-    command: "/home/ubuntu/./hello.js"
+    command: "/.hello.js"
+    args:
+      chdir: /home/ubuntu/
   
 
   
